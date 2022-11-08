@@ -4,56 +4,35 @@
 
 using namespace std;
 
-class Rectangle{
-    private:
-    int lenght;
-    int breadth;
-    
-    public:
-    Rectangle(){
-        lenght=0;
-        breadth=0;
+class Arthimatic{
+    private: 
+    int a;
+    int b;
+ public:
+    Arthimatic(int a, int b){
+        this->a = a;
+        this->b = b;
     }
 
-    Rectangle(int l, int b){
-        lenght  = l;
-        breadth = b;
+    int add(){
+        int c;
+        c = a + b;
+         return c;
     }
 
-    int area(){
-       return  lenght * breadth;
-    }
-
-    int permiter(){
-        return 2*(lenght+breadth);
-    }
-
-    void setLenght(int l){
-        lenght =l;
-    }
-    
-    void setBreadth(int b){
-        breadth = b;
-    }
-
-    int getLenght(){
-        return lenght;
-    }
-
-    int getBreadth(){
-        return breadth;
-    }
-    ~Rectangle(){
-        cout<<"Finish Class"<<endl;
+    int sub(){
+        int c;
+        c =  a - b;
+        return c;
     }
 
 };
 
 int main()
 {   
-    Rectangle r(10,20);
-    cout<<r.area()<<endl;
-     cout<<r.permiter()<<endl;
+    Arthimatic ar(20,10);
+    cout<<ar.add()<<endl;
+    cout<<ar.sub()<<endl;
     return 0;
 }
 
