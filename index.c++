@@ -35,12 +35,25 @@ class Rectangle{
     void setBreadth(int b){
         breadth = b;
     }
-    
-}
+
+    int getLenght(){
+        return lenght;
+    }
+
+    int getBreadth(){
+        return breadth;
+    }
+    ~Rectangle(){
+        cout<<"Finish Class"<<endl;
+    }
+
+};
 
 int main()
 {   
-    
+    Rectangle r(10,20);
+    cout<<r.area()<<endl;
+     cout<<r.permiter()<<endl;
     return 0;
 }
 
