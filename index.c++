@@ -8,25 +8,33 @@ class Arthimatic{
     private: 
     int a;
     int b;
+
  public:
-    Arthimatic(int a, int b){
+ Arthimatic(int a, int b);
+ int add();
+ int sub();
+
+};
+
+
+    Arthimatic::Arthimatic(int a, int b){
         this->a = a;
         this->b = b;
     }
 
-    int add(){
+    int Arthimatic::add(){
         int c;
         c = a + b;
          return c;
     }
 
-    int sub(){
+    int Arthimatic::sub(){
         int c;
         c =  a - b;
         return c;
     }
 
-};
+
 
 int main()
 {   
