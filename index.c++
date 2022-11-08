@@ -4,32 +4,35 @@
 
 using namespace std;
 
+template <class T>
 class Arthimatic{
     private: 
-    int a;
-    int b;
+    T a;
+    T b;
 
  public:
- Arthimatic(int a, int b);
- int add();
- int sub();
+ Arthimatic(T a, T b);
+ T add();
+ T sub();
 
 };
 
-
-    Arthimatic::Arthimatic(int a, int b){
+    template <class T>
+    Arthimatic<T>::Arthimatic(T a, T b){
         this->a = a;
         this->b = b;
     }
 
-    int Arthimatic::add(){
-        int c;
+    template <class T>
+    T Arthimatic<T>::add(){
+        T c;
         c = a + b;
          return c;
     }
-
-    int Arthimatic::sub(){
-        int c;
+    
+    template <class T>
+    T Arthimatic<T>::sub(){
+        T c;
         c =  a - b;
         return c;
     }
@@ -38,7 +41,7 @@ class Arthimatic{
 
 int main()
 {   
-    Arthimatic ar(20,10);
+    Arthimatic<int> ar(20,10);
     cout<<ar.add()<<endl;
     cout<<ar.sub()<<endl;
     return 0;
